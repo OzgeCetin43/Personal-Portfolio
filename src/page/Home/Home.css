@@ -38,7 +38,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #8b83d9;
+  border: 1px solid #b3acf0;
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
@@ -48,12 +48,58 @@
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  background-color: #8b83d9;
+  background-color: #b3acf0;
 }
 
 .job-text {
-  color: #8b83d9;
+  color: #b3acf0;
   font-size: 1.25rem;
+}
+
+.believe-text {
+  text-transform: uppercase;
+  color: transparent;
+  font-size: 6rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.believe-text span:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #b3acf0;
+  transition: 0.5s;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  overflow: hidden;
+  transform: translateY(-18px);
+}
+
+.believe-text span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #b3acf0;
+  transition: 0.5s;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  overflow: hidden;
+  transform: translateY(18px);
+}
+
+.believe-text span:nth-child(3) {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) scale(0);
+  width: 100%;
+  color: #262626;
+  background-color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  letter-spacing: 0.75rem;
+  transform: translateY(-50%) scale(1);
 }
 
 .user-name-container {
@@ -67,7 +113,7 @@
 
 .user-name {
   font-size: 5rem;
-  color: #8b83d9;
+  color: #b3acf0;
   letter-spacing: 0.5rem;
   text-align: center;
 }
@@ -82,13 +128,13 @@
   margin-top: 2rem;
   color: #fff;
   font-weight: bolder;
-  box-shadow: 0.5rem 0.5rem 0 #8b83d9;
+  box-shadow: 0.5rem 0.5rem 0 #ddd8ff;
   transition: all 0.5s ease-in-out;
 }
 
 .download-cv-button:hover {
   box-shadow: none;
-  background-color: #8b83d9;
+  background-color: #b3acf0;
   color: #262626;
 }
 
@@ -113,8 +159,26 @@
     height: 93vh;
   }
 
+  .believe-text {
+    font-size: 4rem;
+  }
+
+  .believe-text span:first-child {
+    transform: translateY(-0.9rem);
+  }
+
+  .believe-text span:nth-child(2) {
+    transform: translateY(0.9rem);
+  }
+
+  .believe-text span:nth-child(3) {
+    font-size: 1.05rem;
+    letter-spacing: 0.5rem;
+  }
+
   .download-cv-button {
     width: 50%;
+    margin-top: 4rem;
   }
 
   .user-name {

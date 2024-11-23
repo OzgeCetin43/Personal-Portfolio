@@ -42,7 +42,9 @@ const Header = () => {
                 delay: index * 0.3,
               }}
             >
-              <a href={route.path}>{route.name}</a>
+              <a href={route.path} data-name={route.name}>
+                {route.name}
+              </a>
             </motion.li>
           ))}
         </ul>

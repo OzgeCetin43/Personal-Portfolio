@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   height: 60px;
-  padding: 0.5rem;
+  padding: 1rem;
   color: #18181b;
 }
 
@@ -30,7 +30,53 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  position: relative;
+  width: fit-content;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  transform: skew(10deg);
+}
+
+.navbar a::before {
+  content: attr(data-name);
+  position: absolute;
+  top: 0;
+  left: -0.75rem;
+  padding-left: 0.75rem;
+  background-color: #18181b;
+  height: 0.85rem;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover::before {
+  top: -0.5rem;
+  left: 0;
+  color: #b3acf0;
+}
+
+.navbar a::after {
+  content: "";
+  height: 0.25rem;
+  width: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #b3acf0;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover::after {
+  width: 120%;
 }
 
 @media (max-width: 920px) {
@@ -75,6 +121,49 @@
   }
 
   .responsive-navbar a {
-    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-size: 3rem;
+    position: relative;
+    width: fit-content;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .responsive-navbar a:hover {
+    transform: skew(10deg);
+  }
+
+  .responsive-navbar a::before {
+    content: attr(data-name);
+    position: absolute;
+    top: 0;
+    left: -1.25rem;
+    padding-left: 1.25rem;
+    background-color: #262626;
+    height: 2rem;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .responsive-navbar a:hover::before {
+    top: -3px;
+    left: 0;
+    color: #b3acf0;
+  }
+
+  .responsive-navbar a::after {
+    content: "";
+    height: 0.25rem;
+    width: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #b3acf0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .responsive-navbar a:hover::after {
+    width: 120%;
+    outline: 1px solid #fff;
   }
 }

@@ -8,7 +8,7 @@ import "./Home.css";
 
 const Home = () => {
   return (
-    <div className="home-container">
+    <div id="home" className="home-container">
       <div className="home-left-container">
         <motion.div
           initial="initial"
@@ -34,12 +34,25 @@ const Home = () => {
         <motion.div
           initial="initial"
           animate="animate"
+          variants={variants.moveDown}
+          transition={transition.moveDown}
+        >
+          <h2 className="believe-text">
+            Believe
+            <span>Believe</span>
+            <span>Believe</span>
+            <span>in yourself</span>
+          </h2>
+        </motion.div>
+        <motion.div
+          initial="initial"
+          animate="animate"
           variants={variants.moveRight}
           transition={transition.moveRight}
           className="user-name-container"
         >
           <h1 className="user-name">
-            Charlotte <span>Nicholas.</span>
+            Charlotte <span>Nicholas</span>.
           </h1>
           <motion.button
             initial="initial"
