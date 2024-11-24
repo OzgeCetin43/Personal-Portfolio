@@ -122,6 +122,14 @@
   color: #fff;
 }
 
+.user-description {
+  color: #fff;
+  font-size: 1.25rem;
+  width: 70%;
+  margin: 3rem auto 0;
+  text-align: center;
+}
+
 .download-cv-button {
   width: 25%;
   background-color: #262626;

@@ -54,6 +54,10 @@ const Home = () => {
           <h1 className="user-name">
             Charlotte <span>Nicholas</span>.
           </h1>
+          <p className="user-description">
+            I design and code beautifully simple things and I love what I do.
+            Just simple like that!
+          </p>
           <motion.button
             initial="initial"
             animate="animate"
